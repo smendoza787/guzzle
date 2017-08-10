@@ -14,6 +14,10 @@ ActiveRecord::Schema.define(version: 20170809074755) do
 
   create_table "bars", force: :cascade do |t|
     t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
