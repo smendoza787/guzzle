@@ -13,6 +13,15 @@ class Api::BarsController < ApplicationController
     end
   end
 
+  def show
+    @bar = Bar.find_by(id: params[:id])
+    if @bar
+      render json: @bar
+    else
+      render json: { errors: {message: "Bar Could Not Be Found" }}
+    end
+  end
+
   private
     def bar_params
       params.require(:bar).permit(:name, :address, :city, :state, :rating)
