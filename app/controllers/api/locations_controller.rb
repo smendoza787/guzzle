@@ -10,7 +10,7 @@ class Api::LocationsController < ApplicationController
 
   def unsplash
     @search_results = Unsplash::Photo.search("bar")
-    render json: { photo: @search_results[rand(10)].table.urls.regular }
+    render json: { url: @search_results[rand(10)].table.urls.regular }
   end
 
   # GET /locations
