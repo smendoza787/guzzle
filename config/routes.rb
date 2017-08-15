@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :locations
 
     post '/google_places', to: 'locations#google_places'
+    get '/unsplash', to: 'locations#unsplash'
   end
 end

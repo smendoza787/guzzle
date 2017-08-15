@@ -3,8 +3,14 @@ class Api::LocationsController < ApplicationController
 
   # get list of spots
   def google_places
-    @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY']);
-    render json: @client.spots(params[:latitude], params[:longitude], :types => ['restaurant', 'bar', 'night_club'])
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
+    @spots = @client.spots(params[:latitude], params[:longitude], :name => 'bar', :types => ['bar', 'night_club'], :radius => 10000)
+    render json: @spots
+  end
+
+  def unsplash
+    @search_results = Unsplash::Photo.search("bar")
+    render json: { photo: @search_results[rand(10)].table.urls.regular }
   end
 
   # GET /locations
