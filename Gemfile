@@ -16,6 +16,7 @@ gem 'geocoder'
 gem 'google_places'
 gem 'pry', groups: [:development]
 gem 'unsplash'
+gem 'foreman', '~> 0.82.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
