@@ -8,7 +8,7 @@ end
 
 gem 'rails', '~> 5.0.5'
 gem 'pg', '~> 0.18'
-gem 'sqlite3'
+gem 'sqlite3', groups: [:development]
 gem 'puma', '~> 3.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'rack-cors'
