@@ -1,24 +1,21 @@
-# README
+# DrinkUp :beer:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DrinkUp is an app for finding your next local watering hole!
 
-Things you may want to cover:
+It uses the Google Places API to fetch data for bars around your current location, and uses the Unsplash API for stock photos.
 
-* Ruby version
+## To Run:
 
-* System dependencies
+1. `git clone` the repository
+2. `cd drinks-on-me-api`
+3. `bundle && cd client && npm install && cd ..`
+4. `rake db:migrate`
+5. run `rake start` to start up rails and react webpack servers
 
-* Configuration
+## API Endpoints
 
-* Database creation
+So far DrinkUp only has one API endpoint:
 
-* Database initialization
+`/api/bars`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I plan on adding more as I work on the project and gather more data.
