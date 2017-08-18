@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #777;
+}
+
+.navbar {
+  height: 60px;
+  text-align: center;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #424242;
+  width: 20%;
+  height: 90vh;
+  overflow: auto;
+  float: left;
+  position: fixed;
+  left: 0;
+  text-align: justify;
+  box-shadow: 0px -2px 10px black;
+  z-index: 5;
+}
+
+.sidebar h3,
+.sidebar p {
+  text-align: center;
+}
+
+.main-content {
+  float: left;
+  width: 80%;
+  height: 90vh;
+  position: fixed;
+  right: 0;
+  overflow: scroll;
+  text-align: center;
+}
+
+.comment-box {
+  margin: 15px auto;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgb(165, 165, 165);
+  min-width: 750px;
+  max-width: 25%;
+  min-height: 125px;
+}
+
+.comment-content {
+  background-color: rgb(207, 216, 220);
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  flex-grow: 3;
+  overflow: scroll;
+}
+
+.comment-author-content {
+  display: flex;
+}
+
+.comment-date {
+  padding: 10px;
+  background-color: #e60000;
+  border-radius: 5px 5px 0 0;
+  color: white;
+}
+
+.comment-form {
+  width: 500px;
+  margin: 25px auto;
+  box-shadow: 0 2px 6px #777;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.comment-form-container {
+  background-color: #DADADF;
+  padding: 25px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.bar-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-show-top-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bar-photo {
+  width: 500px;
+  height: 350px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px;
+  border-radius: 5px;
+}
+
+.bar-details {
+  box-shadow: 0 8px 15px #777;
+  padding: 30px;
+  border-radius: 5px;
+  max-width: 460px;
+  background-color: #fb3a4c;
+  color: white;
+}
+
+.bar-details h2 {
+  color: #ffd334;
+}
+
+.main-header {
+  font-size: 4em;
+  text-shadow: 0 2px 6px #000;
+  color: #e60000;
+}
+
+.main-subheader {
+  text-shadow: 0 2px 6px #000;
+}
+
+.home-page {
+  padding: 150px 0 200px 0;
+  background-image: url('http://i.imgur.com/nWqmjUW.jpg');
+  background-size: cover;
+  color: #fff;
+}
+
+.about-page {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  font-size: 4em;
+  margin-top: 50px;
+}
+
+.about-page h4,
+.about-page h2 {
+  margin-top: 50px;
+}
+
+.about-links {
+  font-size: 3em;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+/* black background on third row text of main page */
+h3 strong {
+  background-color: rgba(0,0,0,.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tech-logos {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
