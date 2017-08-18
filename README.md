@@ -1,4 +1,4 @@
-# DrinkUp :beer:
+# DrinkUp :beers:
 
 DrinkUp is an app for finding your next local watering hole!
 
@@ -19,3 +19,11 @@ So far DrinkUp only has one API endpoint:
 `/api/bars`
 
 I plan on adding more as I work on the project and gather more data.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/smendoza787/drinks-on-me-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/smendoza787/drinks-on-me-api/blob/master/CONTRIBUTING.md) code of conduct.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://github.com/smendoza787/drinks-on-me-api/blob/master/LICENSE).
