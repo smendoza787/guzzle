@@ -14,11 +14,13 @@ It uses the Google Places API to fetch data for bars around your current locatio
 
 ## API Endpoints
 
-So far DrinkUp only has one API endpoint:
+`POST /api/google_places`
 
-`/api/bars`
+	- include `latitude` and `longitude` in your POST request to get information on your nearest bars
 
-I plan on adding more as I work on the project and gather more data.
+`GET /api/unsplash`
+
+	- genereates a random bar-related photo from Unsplash
 
 ## Contributing
 
