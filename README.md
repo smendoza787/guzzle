@@ -14,11 +14,11 @@ It uses the Google Places API to fetch data for bars around your current locatio
 
 ## API Endpoints
 
-`POST /api/google_places`
+* `POST /api/google_places`
 
 	- include `latitude` and `longitude` in your POST request to get information on your nearest bars
 
-`GET /api/unsplash`
+* `GET /api/unsplash`
 
 	- genereates a random bar-related photo from Unsplash
 
