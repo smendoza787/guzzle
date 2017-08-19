@@ -20,7 +20,7 @@ It uses the Google Places API to fetch data for bars around your current locatio
 
 * `GET /api/unsplash`
 
-	- genereates a random bar-related photo from Unsplash
+	- generates a random bar-related photo from Unsplash
 
 ## Contributing
 
