@@ -103,6 +103,7 @@ a:hover {
 
 .bar-show-top-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -122,10 +123,6 @@ a:hover {
   max-width: 460px;
   background-color: #fb3a4c;
   color: white;
-}
-
-.bar-details h2 {
-  color: #ffd334;
 }
 
 .main-header {
@@ -180,4 +177,18 @@ h3 strong {
   display: flex;
   justify-content: space-around;
   margin: 50px 0;
+}
+
+.favorite-bar {
+  background-color: #3F51B5;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 6px #777;
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+}
+
+.fa-star {
+  color: #ffd334;
 }

@@ -1,4 +1,4 @@
-// const API_URL = process.env.REACT_APP_API_URL
+const API_URL = process.env.REACT_APP_API_URL
 
 export function fetchPlaces(latitude, longitude) {
   let formData = new FormData()
@@ -7,7 +7,7 @@ export function fetchPlaces(latitude, longitude) {
 
   return (dispatch) => {
     dispatch({ type: 'LOADING_PLACES' })
-    return fetch('/api/google_places', {
+    return fetch(`${API_URL}/google_places`, {
       method: "POST",
       body: formData
     }).then(response => response.json())

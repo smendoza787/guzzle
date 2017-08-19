@@ -38,7 +38,7 @@ class AddBar extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleOnSubmit}>
+        <form className="add-bar-form" onSubmit={this.handleOnSubmit}>
           <label htmlFor="bar_name">Name</label>
           <input
             type="text"

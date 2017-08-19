@@ -3,17 +3,27 @@ import { Link } from 'react-router-dom'
 import MenuItem from 'material-ui/MenuItem'
 import FontAwesome from 'react-fontawesome'
 
-const BarsList = ({ bars }) => {
+const BarsList = ({ bars, favoriteBars }) => {
   let renderBars
 
   if (bars.length > 0) {
-    renderBars = bars.map(bar =>
-      <MenuItem>
-        <Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link>
-      </MenuItem>
-    )
+    renderBars = bars.map(bar => {
+      if (favoriteBars.includes(bar)) {
+        return (
+          <MenuItem>
+            <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link>
+          </MenuItem>
+        )
+      } else {
+        return (
+          <MenuItem>
+            <Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link>
+          </MenuItem>
+        )
+      }
+    })
   } else {
-    renderBars = <p style={{ marginTop: '250px' }}>Getting nearby business information...</p>
+    renderBars = <p style={{ marginTop: '250px', color: '#fff' }}>Getting nearby business information...</p>
   }
 
 
