@@ -1,1 +1,1 @@
-api: bundle exec 'foreman start -p 3000'
+web: rake start
