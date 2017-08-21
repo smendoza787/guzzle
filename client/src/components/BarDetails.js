@@ -10,7 +10,7 @@ const BarDetails = ({ photo, bar, renderStars, comments, matchUrl }) => {
         <div className="bar-details">
           <h1>{bar.name}</h1>
           <h2>{renderStars(bar.rating)}</h2>
-          <h3>{bar.vicinity}</h3>
+          <h4>{bar.vicinity}</h4>
           <FavoriteButton bar={bar} />
         </div>
       </div>

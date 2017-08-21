@@ -124,6 +124,9 @@ a:hover {
   background-color: #fb3a4c;
   color: white;
 }
+.bar-details h1 {
+  color: #ffcdd2;
+}
 
 .main-header {
   font-size: 4em;
