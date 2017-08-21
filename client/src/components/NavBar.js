@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <AppBar
     title="DrinksUp"
-    style={{ backgroundColor: '#e60000', zIndex: '10', alignItems: 'center', color: '#000' }}
+    style={{ backgroundColor: '#e60000', zIndex: '10', alignItems: 'center', color: '#000', position: 'fixed' }}
     showMenuIconButton={false} >
       <NavLink
         style={{ marginRight: '30px'}}
@@ -16,12 +16,12 @@ const NavBar = () => {
       <NavLink
         style={{ marginRight: '30px'}}
         to="/about" >
-        About
+          About
       </NavLink>
       <NavLink
         style={{ marginRight: '30px'}}
         to="/favorites" >
-        Favorite Bars
+          Favorite Bars
       </NavLink>
     </AppBar>
   )
