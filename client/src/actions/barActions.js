@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 export function fetchBars() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_BARS' })
-    return fetch("api/bars")
+    return fetch("/api/bars")
       .then(response => response.json())
       .then(bars => dispatch({ type: 'FETCH_BARS', payload: bars }))
   }
