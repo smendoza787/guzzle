@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import BarDetails from '../components/BarDetails'
-import FavoriteButton from '../components/FavoriteButton'
+import FavoriteBar from '../components/FavoriteBar'
 import FontAwesome from 'react-fontawesome'
 
 class FavoritesPage extends Component {
@@ -20,16 +19,19 @@ class FavoritesPage extends Component {
   }
 
   render() {
-    const renderFavorites = this.props.favoriteBars.map(bar =>
-      <div className="favorite-bar">
-        <h3><Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link></h3>
-        <p>{this.renderStars(bar.rating)}</p>
-        <FavoriteButton bar={bar} />
-      </div>
-    )
+    let renderFavorites
+
+    if (this.props.favoriteBars.length > 0) {
+      renderFavorites = this.props.favoriteBars.map(bar =>
+        <FavoriteBar bar={bar} renderStars={this.renderStars} />
+      )
+    } else {
+      renderFavorites = [<h2>You don't have any favorite bars yet.</h2>]
+    }
 
     return (
       <div className="favorites">
+        <h1>Favorite Bars</h1>
         {renderFavorites}
       </div>
     )

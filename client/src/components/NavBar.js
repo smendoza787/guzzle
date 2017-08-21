@@ -21,7 +21,7 @@ const NavBar = () => {
       <NavLink
         style={{ marginRight: '30px'}}
         to="/favorites" >
-        My Favorite Bars
+        Favorite Bars
       </NavLink>
     </AppBar>
   )
