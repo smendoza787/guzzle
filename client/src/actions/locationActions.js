@@ -1,5 +1,3 @@
-const API_URL = process.env.REACT_APP_API_URL
-
 export function fetchPlaces(latitude, longitude) {
   let formData = new FormData()
   formData.append('latitude', latitude)
