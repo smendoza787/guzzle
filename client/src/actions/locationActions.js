@@ -7,7 +7,7 @@ export function fetchPlaces(latitude, longitude) {
 
   return (dispatch) => {
     dispatch({ type: 'LOADING_PLACES' })
-    return fetch(`${API_URL}/google_places`, {
+    return fetch('/api/google_places', {
       method: "POST",
       body: formData
     }).then(response => response.json())
