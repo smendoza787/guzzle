@@ -18,3 +18,4 @@
 # Ignore Byebug command history file.
 .byebug_history
 node_modules
+drinks-on-me-api_development.sqlite3

@@ -1,6 +1,6 @@
-# DrinkUp :beers:
+# DrinksUp :beers:
 
-DrinkUp is an app for finding your next local watering hole!
+DrinksUp is an app for finding your next local watering hole!
 
 It uses the Google Places API to fetch data for bars around your current location, and uses the Unsplash API for stock photos.
 
