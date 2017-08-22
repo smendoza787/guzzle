@@ -197,6 +197,11 @@ h3 strong {
   color: #ffd334;
 }
 
+.loading-bars {
+  margin-top: 250px;
+  color: #fff;
+}
+
 @media only screen and (max-width: 1100px) {
     .sidebar {
       width: 100%;
@@ -213,5 +218,8 @@ h3 strong {
     }
     .bar-photo {
       max-width: 100%;
+    }
+    .loading-bars {
+      margin-top: 25px;
     }
 }

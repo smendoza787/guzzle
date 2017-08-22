@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome'
 
 const AboutPage = () =>
   <div className="about-page">
-    <h1>About DrinkUp</h1>
+    <h1>About DrinksUp</h1>
     <h4>DrinkUp was made after getting tired of using the same similarly themed
     app that rhymes with "Melp". It returned almost too much information; I just
     want to know where the nearest bar is, so that me and my friends can go grab some drinks already.</h4>

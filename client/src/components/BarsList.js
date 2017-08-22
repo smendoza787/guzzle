@@ -23,7 +23,7 @@ const BarsList = ({ bars, favoriteBars }) => {
       }
     })
   } else {
-    renderBars = <p style={{ marginTop: '250px', color: '#fff' }}>Getting nearby business information...</p>
+    renderBars = <p className="loading-bars">Getting nearby business information...</p>
   }
 
 
