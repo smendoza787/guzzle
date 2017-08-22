@@ -201,14 +201,16 @@ h3 strong {
     .sidebar {
       width: 100%;
       height: 25vh;
-      position: relative;
       top: 60px;
+      position: relative;
     }
-
+    .navigation {
+      position: fixed;
+    }
     .main-content {
       width: 100%;
       position: relative;
-      top: 60px;
+      top: 150px;
     }
     .bar-photo {
       max-width: 100%;
