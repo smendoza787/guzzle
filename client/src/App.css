@@ -203,6 +203,10 @@ h3 strong {
   color: #fff;
 }
 
+.no-favorite-bars {
+  margin-top: 25px;
+}
+
 @media only screen and (max-width: 1100px) {
     .sidebar {
       width: 100%;

@@ -7,10 +7,10 @@ It uses the Google Places API to fetch data for bars around your current locatio
 ## To Run:
 
 1. `git clone` the repository
-2. `cd drinks-on-me-api`
-3. `bundle && cd client && npm install && cd ..`
+2. `cd drinks-up`
+3. `bundle && cd client && npm install && cd ..` to install dependencies for Ruby and JavaScript applications
 4. `rake db:migrate`
-5. run `rake start` to start up rails and react webpack servers
+5. run `rake start` to start up rails and webpack servers
 
 ## API Endpoints
 
@@ -24,8 +24,8 @@ It uses the Google Places API to fetch data for bars around your current locatio
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/smendoza787/drinks-on-me-api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/smendoza787/drinks-on-me-api/blob/master/CONTRIBUTING.md) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smendoza787/drinks-up. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/smendoza787/drinks-up/blob/master/CONTRIBUTING.md) code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://github.com/smendoza787/drinks-on-me-api/blob/master/LICENSE).
+The gem is available as open source under the terms of the [MIT License](https://github.com/smendoza787/drinks-up/blob/master/LICENSE).
