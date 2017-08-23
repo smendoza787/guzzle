@@ -144,6 +144,7 @@ a:hover {
   background-image: url('http://i.imgur.com/nWqmjUW.jpg');
   background-size: cover;
   color: #fff;
+  min-height: 100%;
 }
 
 .about-page {
