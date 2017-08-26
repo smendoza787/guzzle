@@ -16,6 +16,12 @@ class Api::LocationsController < ApplicationController
 
   # geocoding location string into coordinates
   def coordinates
+    location = Location.new(location_params)
+    if location.save
+      render json: location
+    else
+      render json: "ERROR"
+    end
   end
 
   # GET /locations

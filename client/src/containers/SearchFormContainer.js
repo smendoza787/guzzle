@@ -1,28 +1,52 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getGeocode } from '../actions/locationActions'
+import { fetchPlaces } from '../actions/locationActions'
 
 class SearchFormContainer extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
-      location: ''
+      address: '',
+      latitude: '',
+      longitude: ''
     }
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (this.state.latitude !== prevState.latitude || this.state.longitude !== prevState.longitude) {
+      this.props.fetchPlaces(this.state.latitude, this.state.longitude)
+    }
+  }
+
+  getGeocode = (address) => {
+    var objectToFormData = require('object-to-formdata')
+    var object = { location: { address: address } }
+    var formData = objectToFormData(object)
+
+    fetch("/api/coordinates", {
+      method: "POST",
+      body: formData
+    }).then(response => response.json())
+      .then(location => {
+        this.setState({
+          latitude: location.latitude,
+          longitude: location.longitude
+        })
+      })
   }
 
   handleOnChange = event => {
     this.setState({
-      location: event.target.value
+      address: event.target.value
     })
   }
 
   handleOnSubmit = event => {
     event.preventDefault()
-    const { getGeocode } = this.props
-    getGeocode(this.state.location)
+    this.getGeocode(this.state.address)
     this.setState({
-      location: ''
+      address: ''
     })
   }
 
@@ -30,11 +54,11 @@ class SearchFormContainer extends Component {
     return (
       <form onSubmit={this.handleOnSubmit}>
         <label>
-          {this.state.location}
+          {this.state.address}
           <input
             type="text"
-            name="location"
-            value={this.state.location}
+            name="address"
+            value={this.state.address}
             onChange={this.handleOnChange}
             placeholder="Enter City To Search"
           />
@@ -44,4 +68,4 @@ class SearchFormContainer extends Component {
   }
 }
 
-export default connect(null, { getGeocode })(SearchFormContainer)
+export default connect(null, { fetchPlaces })(SearchFormContainer)
