@@ -1,33 +1,40 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { getGeocode } from '../actions/locationActions'
 
 class SearchFormContainer extends Component {
   constructor() {
     super()
 
     this.state = {
-      city: ''
+      location: ''
     }
   }
 
   handleOnChange = event => {
     this.setState({
-      city: event.target.value
+      location: event.target.value
     })
   }
 
   handleOnSubmit = event => {
     event.preventDefault()
+    const { getGeocode } = this.props
+    getGeocode(this.state.location)
+    this.setState({
+      location: ''
+    })
   }
 
   render() {
     return (
       <form onSubmit={this.handleOnSubmit}>
         <label>
-          {this.state.city}
+          {this.state.location}
           <input
             type="text"
-            name="city"
-            value={this.state.city}
+            name="location"
+            value={this.state.location}
             onChange={this.handleOnChange}
             placeholder="Enter City To Search"
           />
@@ -37,4 +44,4 @@ class SearchFormContainer extends Component {
   }
 }
 
-export default SearchFormContainer
+export default connect(null, { getGeocode })(SearchFormContainer)
