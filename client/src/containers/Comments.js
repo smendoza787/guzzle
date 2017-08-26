@@ -54,7 +54,7 @@ class Comments extends Component {
     return (
       <div className="comments">
         <div className="comment-form-container">
-          <h1>Leave a Comment</h1>
+          <h1>Leave a Review!</h1>
           <div className="comment-form">
             <form ref="commentForm" onSubmit={this.handleSubmit}>
               <input
