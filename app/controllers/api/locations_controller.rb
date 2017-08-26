@@ -14,6 +14,10 @@ class Api::LocationsController < ApplicationController
     render json: { url: @search_results[rand(10)].table.urls.regular }
   end
 
+  # geocoding location string into coordinates
+  def coordinates
+  end
+
   # GET /locations
   def index
     @locations = Location.all
