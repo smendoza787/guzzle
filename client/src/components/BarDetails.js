@@ -6,7 +6,7 @@ const BarDetails = ({ photo, bar, renderStars, comments, matchUrl }) => {
   return (
     <div className="bar-show">
       <div className="bar-show-top-row">
-        <img className="bar-photo" src={photo.photo.url} alt="bar photo" />
+        <img className="bar-photo" src={photo.photo.url} alt="unsplash photography" />
         <div className="bar-details">
           <h1>{bar.name}</h1>
           <h2>{renderStars(bar.rating)}</h2>

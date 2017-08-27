@@ -54,10 +54,11 @@ class SearchFormContainer extends Component {
     let style = {
       backgroundColor: '#fff',
       padding: '15px',
-      maxWidth: '100%',
+      width: '100%',
       borderRadius: '500px',
       color: '#000',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginTop: '25px'
     }
 
     return (

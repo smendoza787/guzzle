@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import BarDetails from '../components/BarDetails'
 import FavoriteBar from '../components/FavoriteBar'
 import FontAwesome from 'react-fontawesome'
 
