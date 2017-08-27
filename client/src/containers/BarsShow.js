@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import BarDetails from '../components/BarDetails'
-import { fetchPhoto } from '../actions/barActions'
+import { fetchPhoto } from '../actions/photoActions'
 import FontAwesome from 'react-fontawesome'
 
 class BarsShow extends Component {
