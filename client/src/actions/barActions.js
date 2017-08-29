@@ -48,7 +48,7 @@ export function removeFavoriteBar(bar) {
 
   return (dispatch) => {
     dispatch({ type: 'LOADING_BARS' })
-    return fetch('/api/bars/${bar.place_id}', {
+    return fetch(`/api/bars/${bar.place_id}`, {
       method: "DELETE",
       body: formData
     }).then(response => response.json())
