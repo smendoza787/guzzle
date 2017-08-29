@@ -5,16 +5,23 @@ class Api::BarsController < ApplicationController
   end
 
   def create
-    @bar = Bar.new(bar_params)
-    if @bar.save
+    @bar = Bar.find_by(bar_params)
+    if @bar
       render json: @bar
     else
-      render json: { errors: {message: "This Bar Failed To Save" }}
+      @bar = Bar.create(bar_params)
+      render json: @bar
     end
+  end
+
+  def destroy
+    @bar = Bar.find_by(place_id: params[:id])
+    @bar.destroy
+    render json: @bar
   end
 
   private
     def bar_params
-      params.require(:bar).permit(:name, :address, :city, :state, :rating)
+      params.require(:bar).permit(:name, :address, :city, :state, :rating, :vicinity, :place_id)
     end
 end

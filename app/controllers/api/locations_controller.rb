@@ -4,7 +4,11 @@ class Api::LocationsController < ApplicationController
   # get list of spots
   def google_places
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
-    @spots = @client.spots(params[:latitude], params[:longitude], :name => 'bar', :types => ['bar', 'night_club'], :radius => 10000)
+    @results = @client.spots(params[:latitude], params[:longitude], :name => 'bar', :types => ['bar', 'night_club'], :radius => 10000)
+    @spots = @results.map do |spot|
+      spot.place_id = spot.id
+      spot
+    end
     render json: @spots
   end
 

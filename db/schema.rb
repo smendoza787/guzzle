@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20170812070904) do
     t.string   "address"
     t.string   "city"
     t.string   "state"
+    t.string   "vicinity"
     t.integer  "rating"
+    t.string   "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

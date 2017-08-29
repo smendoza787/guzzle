@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { fetchFavoriteBars } from '../actions/barActions'
 import FavoriteBar from '../components/FavoriteBar'
 import FontAwesome from 'react-fontawesome'
 
 class FavoritesPage extends Component {
+  componentWillMount = () => {
+    this.props.fetchFavoriteBars()
+  }
+
   renderStars = (rating) => {
     let numOfStars = parseInt(rating)
     if (numOfStars > 0) {
@@ -43,4 +48,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(FavoritesPage)
+export default connect(mapStateToProps, { fetchFavoriteBars })(FavoritesPage)

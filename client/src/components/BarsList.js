@@ -8,19 +8,20 @@ const BarsList = ({ bars, favoriteBars }) => {
 
   if (bars.length > 0) {
     renderBars = bars.map(bar => {
-      if (favoriteBars.includes(bar)) {
-        return (
-          <MenuItem>
-            <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link>
-          </MenuItem>
-        )
-      } else {
-        return (
-          <MenuItem>
-            <Link key={bar.name} to={`/bars/${bar.id}`}>{bar.name}</Link>
-          </MenuItem>
-        )
+      for (var i = 0; i < favoriteBars.length; i++) {
+        if (bar.name === favoriteBars[i].name) {
+          return (
+            <MenuItem>
+              <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
+            </MenuItem>
+          )
+        }
       }
+      return (
+        <MenuItem>
+          <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
+        </MenuItem>
+      )
     })
   } else {
     renderBars = <p className="loading-bars">Getting nearby business information...</p>
