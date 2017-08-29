@@ -36,6 +36,7 @@ a:hover {
   text-align: justify;
   box-shadow: 0px -2px 10px black;
   z-index: 5;
+  padding-bottom: 70px;
 }
 
 .sidebar h3,
@@ -51,6 +52,7 @@ a:hover {
   right: 0;
   overflow: scroll;
   text-align: center;
+  padding-bottom: 70px;
 }
 
 .comment-box {
@@ -132,7 +134,7 @@ a:hover {
 .main-header {
   font-size: 4em;
   text-shadow: 0 2px 6px #000;
-  color: #e60000;
+  color: #29a3a9;
 }
 
 .main-subheader {
@@ -141,9 +143,9 @@ a:hover {
 
 .home-page {
   padding: 150px 0 200px 0;
-  background-image: url('http://i.imgur.com/nWqmjUW.jpg');
+  background-image: url('http://i.imgur.com/SOROfGt.jpg');
+  background-position: center bottom;
   background-size: cover;
-  background-position: center center;
   color: #fff;
   height: 100%;
 }
@@ -167,9 +169,11 @@ a:hover {
   font-size: 1.5em;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(202, 35, 35, 0.5);
-  border-radius: 10px;
   margin-top: 50px;
+}
+
+.about-links > a {
+  color: #545454;
 }
 
 /* black background on third row text of main page */
@@ -183,6 +187,10 @@ h3 strong {
   display: flex;
   justify-content: space-around;
   margin: 50px 0;
+}
+
+.favorites {
+  padding-bottom: 75px;
 }
 
 .favorite-bar {
@@ -227,8 +235,5 @@ h3 strong {
     }
     .loading-bars {
       margin-top: 25px;
-    }
-    .main-header {
-      font-size: 1em;
     }
 }

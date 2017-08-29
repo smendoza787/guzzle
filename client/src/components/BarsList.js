@@ -4,25 +4,33 @@ import MenuItem from 'material-ui/MenuItem'
 import FontAwesome from 'react-fontawesome'
 
 const BarsList = ({ bars, favoriteBars }) => {
-  let renderBars
+  let renderBars, nonFavBars
+
 
   if (bars.length > 0) {
-    renderBars = bars.map(bar => {
+    debugger
+    nonFavBars = bars.filter(bar => {
       for (var i = 0; i < favoriteBars.length; i++) {
         if (bar.name === favoriteBars[i].name) {
-          return (
-            <MenuItem>
-              <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
-            </MenuItem>
-          )
+          return false
         }
       }
-      return (
-        <MenuItem>
-          <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
-        </MenuItem>
-      )
+      return true
     })
+
+    nonFavBars = nonFavBars.map(bar =>
+      <MenuItem>
+        <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
+      </MenuItem>
+    )
+
+    favoriteBars = favoriteBars.map(bar =>
+      <MenuItem>
+        <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
+      </MenuItem>
+    )
+
+    renderBars = favoriteBars.concat(nonFavBars)
   } else {
     renderBars = <p className="loading-bars">Getting nearby business information...</p>
   }
