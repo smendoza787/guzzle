@@ -8,7 +8,6 @@ const BarsList = ({ bars, favoriteBars }) => {
 
 
   if (bars.length > 0) {
-    debugger
     nonFavBars = bars.filter(bar => {
       for (var i = 0; i < favoriteBars.length; i++) {
         if (bar.name === favoriteBars[i].name) {
