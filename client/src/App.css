@@ -204,7 +204,7 @@ h3 strong {
   display: inline-block;
   border-radius: 5px;
   color: #fff;
-  max-width: 700px;
+  min-width: 300px;
   width: 50%;
 }
 
