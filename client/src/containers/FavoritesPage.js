@@ -34,7 +34,10 @@ class FavoritesPage extends Component {
         <FavoriteBar bar={bar} renderStars={this.renderStars} />
       )
     } else {
-      renderFavorites = [<h2>You don't have any favorite bars yet.</h2>, <img src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="no-bars-yet" className="no-favorite-bars" />]
+      renderFavorites = [
+        <h2>You don't have any favorite bars yet.</h2>,
+        <img src="https://media.giphy.com/media/9J7tdYltWyXIY/giphy.gif" alt="no-bars-yet" className="no-favorite-bars" />
+      ]
     }
 
     return (
