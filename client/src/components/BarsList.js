@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MenuItem from 'material-ui/MenuItem'
 import FontAwesome from 'react-fontawesome'
+import Loader from 'halogen/ScaleLoader';
 
 const BarsList = ({ bars, favoriteBars }) => {
   let renderBars, nonFavBars
@@ -31,7 +32,7 @@ const BarsList = ({ bars, favoriteBars }) => {
 
     renderBars = favoriteBars.concat(nonFavBars)
   } else {
-    renderBars = <p className="loading-bars">Getting nearby business information...</p>
+    renderBars = <Loader className="spinner" color="#ffffff" size="16px" margin="4px"/>
   }
 
 

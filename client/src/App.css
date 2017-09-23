@@ -212,9 +212,8 @@ h3 strong {
   color: #ffd334;
 }
 
-.loading-bars {
-  margin-top: 250px;
-  color: #fff;
+.spinner {
+  margin: 250px 80px;
 }
 
 .no-favorite-bars {
@@ -240,5 +239,8 @@ h3 strong {
     }
     .loading-bars {
       margin-top: 25px;
+    }
+    .spinner {
+      margin: 50px;
     }
 }

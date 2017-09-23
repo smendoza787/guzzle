@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "google-maps-react": "^1.1.0",
+    "halogen": "^0.2.0",
     "history": "^4.6.3",
     "material-ui": "^0.18.7",
     "object-to-formdata": "^1.0.12",
