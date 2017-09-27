@@ -94,7 +94,6 @@ a:hover {
 .comment-form-container {
   background-color: #DADADF;
   padding: 25px;
-  margin-top: 75px;
   margin-bottom: 50px;
 }
 
@@ -106,8 +105,10 @@ a:hover {
 .bar-show-top-row {
   display: flex;
   flex-wrap: wrap;
+  padding: 100px 0;
   justify-content: space-around;
   align-items: center;
+  background-color: red;
 }
 
 .bar-photo {
