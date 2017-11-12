@@ -33,7 +33,9 @@ class BarsShow extends Component {
   render() {
     return (
       <div className="bar-show">
-        <img className="bar-photo" src={this.props.photo.photo.url} alt="unsplash photography" />
+        <div className="bar-photo">
+          <img src={this.props.photo.photo.url} alt="unsplash photography" />
+        </div>
         <BarDetails
           bar={this.props.bar}
           renderStars={this.renderStars} />

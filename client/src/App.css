@@ -47,7 +47,7 @@ a:hover {
 .main-content {
   float: left;
   width: 80%;
-  height: 100vh;
+  height: 110%;
   position: fixed;
   right: 0;
   overflow: scroll;
@@ -110,30 +110,31 @@ a:hover {
 }
 
 .bar-photo {
-  width: 500px;
-  height: 350px;
-  margin: 25px 0;
-  box-shadow: 0 5px 15px;
+  max-height: 300px;
+  overflow: hidden;
   border-radius: 5px;
 }
 
+.bar-photo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .bar-details {
-  box-shadow: 0 8px 15px #777;
-  padding: 30px;
+  box-shadow: 0 3px 5px #474747;
+  padding: 15px 30px;
   border-radius: 5px;
-  max-width: 460px;
+  max-width: 650px;
   background-color: #fb3a4c;
-  color: white;
-}
-
-.bar-details {
   color: #ffcdd2;
+  margin: 0 auto;
+  position: relative;
+  bottom: 75px;
 }
 
 .main-header {
   font-size: 4em;
-  text-shadow: 0 2px 6px #000;
-  color: #29a3a9;
+  color: #3358b3;
 }
 
 .main-subheader {
@@ -141,8 +142,8 @@ a:hover {
 }
 
 .home-page {
+  background-color: #e4e4e4;
   padding: 150px 0 200px 0;
-  background-image: url('http://i.imgur.com/SOROfGt.jpg');
   background-position: center bottom;
   background-size: cover;
   color: #fff;
@@ -173,13 +174,6 @@ a:hover {
 
 .about-links > a {
   color: #545454;
-}
-
-/* black background on third row text of main page */
-h3 strong {
-  background-color: rgba(0,0,0,.5);
-  padding: 10px;
-  border-radius: 10px;
 }
 
 .tech-logos {

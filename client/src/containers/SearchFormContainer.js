@@ -51,28 +51,26 @@ class SearchFormContainer extends Component {
   }
 
   render() {
-    let style = {
+    const style = {
       backgroundColor: '#fff',
       padding: '15px',
-      width: '100%',
-      borderRadius: '500px',
-      color: '#000',
+      maxWidth: '500px',
+      borderRadius: '10px',
+      color: 'rgba(0,0,0,0.5)',
       textAlign: 'center',
       marginTop: '25px'
     }
 
     return (
       <form onSubmit={this.handleOnSubmit} class="search-bar">
-        <label>
-          <input
-            style={style}
-            type="text"
-            name="address"
-            value={this.state.address}
-            onChange={this.handleOnChange}
-            placeholder="Type in address, city, or zip to search"
-          />
-        </label>
+        <input
+          style={style}
+          type="text"
+          name="address"
+          value={this.state.address}
+          onChange={this.handleOnChange}
+          placeholder="Type in address, city, or zip to search"
+        />
       </form>
     )
   }
