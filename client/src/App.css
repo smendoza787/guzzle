@@ -110,7 +110,7 @@ a:hover {
 }
 
 .bar-photo {
-  max-height: 300px;
+  max-height: 350px;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -129,7 +129,7 @@ a:hover {
   color: #ffcdd2;
   margin: 0 auto;
   position: relative;
-  bottom: 75px;
+  bottom: 100px;
   z-index: 100;
 }
 
