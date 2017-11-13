@@ -18,6 +18,13 @@ class Api::LocationsController < ApplicationController
     render json: { url: @search_results[rand(10)].table.urls.regular }
   end
 
+  # unsplash api
+  def foursquare
+    client = Foursquare2::Client.new(:client_id => ENV['FOURSQUARE_CLIENT_ID'], :client_secret => ENV['FOURSQUARE_CLIENT_SECRET'], :api_version => '20171101')
+    venues = client.search_venues(:ll => '36.142064,-86.816086', :query => 'Starbucks')
+    render json: venues
+  end
+
   # geocoding location string into coordinates
   def coordinates
     location = Location.new(location_params)
