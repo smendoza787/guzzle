@@ -8,7 +8,7 @@ import {
 
 const BarMap = withScriptjs(withGoogleMap(props =>
   <GoogleMap
-    defaultZoom={16}
+    defaultZoom={10}
     defaultCenter={props.coordinates} >
       {props.isMarkerShown && <Marker position={props.coordinates} />}
   </GoogleMap>
