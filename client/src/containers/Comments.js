@@ -58,20 +58,20 @@ class Comments extends Component {
           <div className="comment-form">
             <form ref="commentForm" onSubmit={this.handleSubmit}>
               <input
-              type="text"
-              name="author"
-              ref="author"
-              placeholder="author"
-              onChange={this.handleOnChange} />
+                type="text"
+                name="author"
+                ref="author"
+                placeholder="author"
+                onChange={this.handleOnChange} />
               <input
-              type="text"
-              name="comment"
-              ref="comment"
-              placeholder="comment"
-              onChange={this.handleOnChange} />
+                type="text"
+                name="comment"
+                ref="comment"
+                placeholder="comment"
+                onChange={this.handleOnChange} />
               <input
-              type="submit"
-              hidden />
+                type="submit"
+                hidden />
             </form>
           </div>
         </div>

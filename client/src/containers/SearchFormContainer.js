@@ -62,7 +62,7 @@ class SearchFormContainer extends Component {
     }
 
     return (
-      <form onSubmit={this.handleOnSubmit} class="search-bar">
+      <form onSubmit={this.handleOnSubmit} className="search-bar">
         <input
           style={style}
           type="text"
