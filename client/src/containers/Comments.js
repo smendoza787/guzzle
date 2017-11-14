@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addComment } from '../actions/commentActions'
+import Comment from '../components/Comment'
 
 class Comments extends Component {
   constructor() {
@@ -31,43 +32,24 @@ class Comments extends Component {
     this.refs.commentForm.reset()
   }
 
-  renderComment = (comment, index) => {
-    return (
-      <div className="comment-box" key={index}>
-        <div className="comment-date">
-          {comment.date}
-        </div>
-        <div className="comment-author-content">
-          <div style={{ padding: '10px' }}>
-            <img src="http://i.imgur.com/JKNPJij.jpg" height="75" width="75" alt="cat" style={{ borderRadius: '50%'}} />
-            <h3>{comment.author}</h3>
-          </div>
-          <div className="comment-content">
-            <h4>{comment.comment}</h4>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   render() {
     return (
       <div className="comments">
         <div className="comment-form-container">
-          <h1>Leave a Review!</h1>
+          <h2>Love this place? Let us know!</h2>
           <div className="comment-form">
             <form ref="commentForm" onSubmit={this.handleSubmit}>
               <input
                 type="text"
                 name="author"
                 ref="author"
-                placeholder="author"
+                placeholder="Name"
                 onChange={this.handleOnChange} />
               <input
                 type="text"
                 name="comment"
                 ref="comment"
-                placeholder="comment"
+                placeholder="Your thoughts?"
                 onChange={this.handleOnChange} />
               <input
                 type="submit"
@@ -75,7 +57,7 @@ class Comments extends Component {
             </form>
           </div>
         </div>
-        {this.props.barComments.map(this.renderComment)}
+        {this.props.barComments.map(comment => <Comment comment={comment} />)}
       </div>
     )
   }
