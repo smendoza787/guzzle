@@ -92,7 +92,7 @@ a:hover {
 }
 
 .comment-form-container {
-  background-color: #DADADF;
+  background-color: #ececec;
   padding: 25px;
   margin-bottom: 50px;
 }
@@ -237,9 +237,14 @@ a:hover {
 }
 
 .google-map {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   max-height: 350px;
   position: relative;
   bottom: 217px;
+}
+
+.comments {
+  position: relative;
+  top: -215px;
 }

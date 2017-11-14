@@ -21,8 +21,13 @@ class Api::LocationsController < ApplicationController
   # unsplash api
   def foursquare
     client = Foursquare2::Client.new(:client_id => ENV['FOURSQUARE_CLIENT_ID'], :client_secret => ENV['FOURSQUARE_CLIENT_SECRET'], :api_version => '20171101')
-    venues = client.search_venues(:ll => '36.142064,-86.816086', :query => 'Starbucks')
-    render json: venues
+    venues = client.search_venues(:ll => "#{params[:latitude]},#{params[:longitude]}", :query => 'bars')
+    venues_with_photos = venues.venues.map do |venue|
+      photos = client.venue_photos(venue.id).items
+      venue.photo = photos[0]
+      venue
+    end
+    render json: venues_with_photos
   end
 
   # geocoding location string into coordinates
