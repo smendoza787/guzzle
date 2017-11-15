@@ -57,6 +57,7 @@ class Comments extends Component {
             </form>
           </div>
         </div>
+        <h2>Comments for {this.props.bar.name}</h2>
         {this.props.barComments.map(comment => <Comment comment={comment} />)}
       </div>
     )

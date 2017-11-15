@@ -47,7 +47,7 @@ class BarsShow extends Component {
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPoE2MRiJslI7MdbnsW32xvgCIHvLssBg&v=3.exp&libraries=geometry,drawing,places"          
           loadingElement={<div style={{ height: `100%` }} />}
           isMarkerShown />
-        <Comments barComments={this.props.comments} match={this.props.match} />
+        <Comments barComments={this.props.comments} bar={this.props.bar} match={this.props.match} />
       </div>
     )
   }
