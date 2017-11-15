@@ -1,9 +1,11 @@
 import React from 'react'
+import moment from 'moment'
+
 
 const Comment = ({ comment }) =>
   <div className="comment-box">
     <div className="comment-date">
-      {comment.date}
+      {moment(comment.date).fromNow()}
     </div>
     <div className="comment-author-content">
       <div style={{ padding: '10px' }}>

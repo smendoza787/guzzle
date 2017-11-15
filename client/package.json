@@ -14,6 +14,7 @@
     "halogen": "^0.2.0",
     "history": "^4.6.3",
     "material-ui": "^0.18.7",
+    "moment": "^2.19.2",
     "object-to-formdata": "^1.0.12",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
