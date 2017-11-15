@@ -107,7 +107,7 @@ a:hover {
   color: #dddddd;
   text-align: right;
   position: absolute;
-  left: 30px;
+  right: 0;
   bottom: -30px;
   font-size: .8em;
 }
