@@ -5,7 +5,7 @@ import AppBar from 'material-ui/AppBar';
 const NavBar = () => {
   return (
     <AppBar
-    title="DrinksUp"
+    title="Guzzle"
     style={{ backgroundColor: '#b52532', zIndex: '10', alignItems: 'center', color: '#000' }}
     showMenuIconButton={false}
     className="navigation" >
