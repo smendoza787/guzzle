@@ -9,9 +9,6 @@ export function fetchPlaces(latitude, longitude) {
       method: "POST",
       body: formData
     }).then(response => response.json())
-      .then(bars => {
-        console.log(bars)
-        dispatch({ type: 'FETCH_BARS', payload: bars })
-      })
+      .then(bars => dispatch({ type: 'FETCH_BARS', payload: bars }))
   }
 }
