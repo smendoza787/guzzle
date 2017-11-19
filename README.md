@@ -1,16 +1,20 @@
-# DrinksUp :beers:
+# Guzzle :beers:
 
-DrinksUp is an app for finding your next local watering hole!
+Guzzle (Formerly DrinksUp) is intended to be a one-stop-shop for bartenders looking for tools to make their lives easier.
 
-It uses the Google Places API to fetch data for bars around your current location, and uses the Unsplash API for stock photos.
+As of now, it uses the Google Places API to fetch data for bars around your current location, and uses the Unsplash API for stock photos.
+
+### Features Under Contruction
+	- Tip Tracker
+	- Cocktail Recipes
 
 ## To Run:
 
 1. `git clone` the repository
-2. `cd drinks-up`
+2. `cd guzzle`
 3. `bundle && cd client && npm install && cd ..` to install dependencies for Ruby and JavaScript applications
-4. `rake db:migrate`
-5. run `rake start` to start up rails and webpack servers
+4. `rails db:migrate`
+5. run `rails start` to start up rails and webpack servers
 
 ## API Endpoints
 
@@ -24,8 +28,8 @@ It uses the Google Places API to fetch data for bars around your current locatio
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/smendoza787/drinks-up. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/smendoza787/drinks-up/blob/master/CONTRIBUTING.md) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smendoza787/guzzle. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/smendoza787/guzzle/blob/master/CONTRIBUTING.md) code of conduct.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://github.com/smendoza787/drinks-up/blob/master/LICENSE).
+The gem is available as open source under the terms of the [MIT License](https://github.com/smendoza787/guzzle/blob/master/LICENSE).
