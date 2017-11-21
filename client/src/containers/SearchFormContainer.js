@@ -54,7 +54,7 @@ class SearchFormContainer extends Component {
     const style = {
       backgroundColor: '#fff',
       padding: '15px',
-      maxWidth: '500px',
+      width: '50%',
       borderRadius: '10px',
       color: 'rgba(0,0,0,0.5)',
       textAlign: 'center',
