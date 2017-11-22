@@ -46,7 +46,7 @@ class BarsList extends Component {
 
 
     return (
-      <div className="sidebar">
+      <div className="bars-list">
         <h3 style={{ color: '#b1b1b1' }}>
           Your Local Bars <FontAwesome name='glass' />
         </h3>
