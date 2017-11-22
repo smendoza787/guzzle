@@ -27,17 +27,13 @@ a:hover {
   margin: 0;
 }
 
-.sidebar {
+.bars-list {
   background-color: #424242;
-  width: 20%;
-  height: 100vh;
-  overflow: auto;
+  width: 35%;
+  overflow: scroll;
   float: left;
-  position: fixed;
-  left: 0;
   text-align: justify;
   box-shadow: 0px -2px 10px black;
-  z-index: 5;
   padding-bottom: 70px;
 }
 
@@ -175,10 +171,11 @@ a:hover {
 .home-page {
   background-color: #e4e4e4;
   padding: 50px 0 200px 0;
-  background-position: center bottom;
-  background-size: cover;
-  color: #fff;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-page {
@@ -267,7 +264,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
   .home-page h1 {
     font-size: 1.5em;
   }
@@ -283,4 +280,8 @@ a:hover {
   max-height: 350px;
   position: relative;
   bottom: 217px;
+}
+
+.search-bar input {
+  width: 100%;
 }
