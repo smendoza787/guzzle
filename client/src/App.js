@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import NavBar from './components/NavBar'
-import BarsList from './components/BarsList'
 import Main from './components/Main'
 import HomePage from './components/HomePage'
 import BarsPage from './components/BarsPage'
@@ -16,7 +15,6 @@ class App extends Component {
         <MuiThemeProvider>
           <div>
             <NavBar />
-            <BarsList />
             <Main>
               <Route exact path='/' component={HomePage} />
               <Route exact path='/about' component={AboutPage} />

@@ -1,3 +1,5 @@
+/* TODO: DELETE COMMENTED CODE on ln 50 */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 * {
@@ -45,13 +47,13 @@ a:hover {
 }
 
 .main-content {
-  float: left;
-  width: 80%;
-  height: 110%;
-  position: fixed;
-  right: 0;
-  overflow: scroll;
-  text-align: center;
+  /* float: left; */
+  width: 100%;
+  /* height: 100%; */
+  /* position: fixed; */
+  /* right: 0; */
+  /* overflow: scroll; */
+  /* text-align: center; */
 }
 
 .comments {
