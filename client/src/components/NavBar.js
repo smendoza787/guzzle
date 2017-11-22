@@ -21,6 +21,11 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         style={{ marginRight: '30px'}}
+        to="/bars" >
+          Search Local Bars
+      </NavLink>
+      <NavLink
+        style={{ marginRight: '30px'}}
         to="/favorites" >
           Favorite Bars
       </NavLink>
