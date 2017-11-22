@@ -35,18 +35,18 @@ class BarsShow extends Component {
     if (!this.props.photo) {
       return (
         <div className="bar-show">
-        <BarDetails
-          bar={this.props.bar}
-          renderStars={this.renderStars} />
-        <BarMap
-          coordinates={{ lat: this.props.bar.lat, lng: this.props.bar.lng }} 
-          containerElement={<div className="google-map" style={{ height: `450px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPoE2MRiJslI7MdbnsW32xvgCIHvLssBg&v=3.exp&libraries=geometry,drawing,places"          
-          loadingElement={<div style={{ height: `100%` }} />}
-          isMarkerShown />
-        <Comments barComments={this.props.comments} bar={this.props.bar} match={this.props.match} />
-      </div>
+          <BarDetails
+            bar={this.props.bar}
+            renderStars={this.renderStars} />
+          <BarMap
+            coordinates={{ lat: this.props.bar.lat, lng: this.props.bar.lng }} 
+            containerElement={<div className="google-map" style={{ height: `450px` }} />}
+            mapElement={<div style={{ height: `100%` }} />}
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPoE2MRiJslI7MdbnsW32xvgCIHvLssBg&v=3.exp&libraries=geometry,drawing,places"          
+            loadingElement={<div style={{ height: `100%` }} />}
+            isMarkerShown />
+          <Comments barComments={this.props.comments} bar={this.props.bar} match={this.props.match} />
+        </div>
       )
     } else {
       return (
