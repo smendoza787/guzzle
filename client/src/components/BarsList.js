@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import MenuItem from 'material-ui/MenuItem'
-import FontAwesome from 'react-fontawesome'
 import Loader from 'halogen/ScaleLoader'
+import  FontAwesome from 'react-fontawesome'
+import BarsListItem from './BarsListItem'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { fetchBars, fetchFavoriteBars } from '../actions/barActions'
@@ -27,27 +26,28 @@ class BarsList extends Component {
 
     if (this.props.favoriteBars.length > 0) {
       renderFavoriteBars = this.props.favoriteBars.map(bar =>
-        <MenuItem>
-          <FontAwesome name='star' /> <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
-        </MenuItem>
+        <BarsListItem bar={bar} isFavorite={true} />
       )
     }
 
     if (this.props.fetchedBars.length > 0) {
-      renderBars = this.props.fetchedBars.map(bar =>
-        <MenuItem>
-          <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
-        </MenuItem>
+      renderBars = this.props.fetchedBars.map(bar => {
+        console.log(bar)
+        return <BarsListItem bar={bar} isFavorite={false} />
+      }
       )
     } else {
-      renderBars = <Loader className="spinner" color="#ffffff" size="16px" margin="4px"/>
+      renderBars = [
+        <Loader className="spinner" color="#ffffff" size="16px" margin="4px"/>,
+        <h3>Loading nearby locations...</h3>
+      ]
     }
 
 
 
     return (
       <div className="bars-list">
-        <h3 style={{ color: '#b1b1b1' }}>
+        <h3 className="local-bars-title">
           Your Local Bars <FontAwesome name='glass' />
         </h3>
         {renderFavoriteBars}
