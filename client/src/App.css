@@ -27,6 +27,11 @@ a:hover {
   margin: 0;
 }
 
+.local-bars-title {
+  color: white;
+  margin: 25px;
+}
+
 .bars-list {
   background-color: #396580;
   width: 35%;
@@ -37,9 +42,15 @@ a:hover {
   padding-bottom: 70px;
 }
 
-.sidebar h3,
-.sidebar p {
-  text-align: center;
+.bar-item {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.637);
+  border-radius: 3px;
+}
+
+.favorite-bar-item {
+  background-color: #b6b42d;
 }
 
 .main-content {
@@ -232,7 +243,7 @@ a:hover {
 }
 
 .spinner {
-  margin: 250px 80px;
+  margin-top: 25px;
 }
 
 .no-favorite-bars {
