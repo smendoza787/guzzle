@@ -45,12 +45,11 @@ a:hover {
 .bar-item {
   padding: 10px;
   margin: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.637);
   border-radius: 3px;
 }
 
 .favorite-bar-item {
-  background-color: #b6b42d;
+  background-color: #cccccc;
 }
 
 .main-content {
@@ -275,7 +274,7 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1130px) {
   .home-page h1 {
     font-size: 1.5em;
   }
