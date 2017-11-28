@@ -15,7 +15,10 @@ const BarsListItem = ({ bar, isFavorite }) => {
   } else {
     return (
       <div className="bar-item">
-        <Link key={bar.name} to={`/bars/${bar.place_id}`}>{bar.name}</Link>
+        <Link key={bar.name} to={`/bars/${bar.place_id}`}>
+          <h3>{bar.name}</h3>
+          {bar.vicinity}
+        </Link>
       </div>
     )
   }
