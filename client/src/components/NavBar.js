@@ -6,18 +6,13 @@ const NavBar = () => {
   return (
     <AppBar
     title="Guzzle"
-    style={{ backgroundColor: '#b52532', zIndex: '10', alignItems: 'center', color: '#000' }}
+    style={{ backgroundColor: '#514fca', zIndex: '10', alignItems: 'center', color: '#000' }}
     showMenuIconButton={false}
     className="navigation" >
       <NavLink
         style={{ marginRight: '30px'}}
         to="/" >
           Home
-      </NavLink>
-      <NavLink
-        style={{ marginRight: '30px'}}
-        to="/about" >
-          About
       </NavLink>
       <NavLink
         style={{ marginRight: '30px'}}

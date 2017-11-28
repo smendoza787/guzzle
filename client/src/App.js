@@ -5,7 +5,6 @@ import NavBar from './components/NavBar'
 import Main from './components/Main'
 import HomePage from './components/HomePage'
 import BarsPage from './components/BarsPage'
-import AboutPage from './components/AboutPage'
 import FavoritesPage from './containers/FavoritesPage'
 import './App.css'
 
@@ -17,7 +16,6 @@ class App extends Component {
             <NavBar />
             <Main>
               <Route exact path='/' component={HomePage} />
-              <Route exact path='/about' component={AboutPage} />
               <Route path='/bars' component={BarsPage} />
               <Route path='/favorites' component={FavoritesPage} />
             </Main>
