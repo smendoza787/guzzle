@@ -263,9 +263,10 @@ a:hover {
 @media only screen and (max-width: 1100px) {
     .bars-list {
       width: 100%;
-      height: 200px;
+      height: 250px;
       position: relative;
       text-align: center;
+      overflow: scroll;
     }
     .navigation {
       position: fixed;
