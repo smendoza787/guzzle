@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Loader from 'halogen/ScaleLoader'
 import  FontAwesome from 'react-fontawesome'
 import BarsListItem from './BarsListItem'
+import SearchFormContainer from '../containers/SearchFormContainer'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { fetchBars, fetchFavoriteBars } from '../actions/barActions'
@@ -31,10 +32,8 @@ class BarsList extends Component {
     }
 
     if (this.props.fetchedBars.length > 0) {
-      renderBars = this.props.fetchedBars.map(bar => {
-        console.log(bar)
-        return <BarsListItem bar={bar} isFavorite={false} />
-      }
+      renderBars = this.props.fetchedBars.map(bar =>
+        <BarsListItem bar={bar} isFavorite={false} />
       )
     } else {
       renderBars = [
@@ -50,6 +49,7 @@ class BarsList extends Component {
         <h3 className="local-bars-title">
           Your Local Bars <FontAwesome name='glass' />
         </h3>
+        <SearchFormContainer />
         {renderFavoriteBars}
         {renderBars}
       </div>

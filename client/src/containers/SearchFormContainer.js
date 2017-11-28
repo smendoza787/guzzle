@@ -53,12 +53,13 @@ class SearchFormContainer extends Component {
   render() {
     const style = {
       backgroundColor: '#fff',
-      padding: '15px',
-      width: '50%',
-      borderRadius: '10px',
+      padding: '10px',
+      width: '90%',
+      borderRadius: '7px',
       color: 'rgba(0,0,0,0.5)',
       textAlign: 'center',
-      marginTop: '25px'
+      margin: '10px',
+      fontSize: '1em'
     }
 
     return (
