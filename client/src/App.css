@@ -260,6 +260,12 @@ a:hover {
   margin-top: 25px;
 }
 
+.drink {
+  float: left;
+  margin: 5px;
+  border: 2px solid #000;
+}
+
 @media only screen and (max-width: 1100px) {
     .bars-list {
       width: 100%;
