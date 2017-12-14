@@ -6,6 +6,7 @@ import Main from './components/Main'
 import HomePage from './components/HomePage'
 import BarsPage from './components/BarsPage'
 import FavoritesPage from './containers/FavoritesPage'
+import RecipesPage from './containers/RecipesPage'
 import './App.css'
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
               <Route exact path='/' component={HomePage} />
               <Route path='/bars' component={BarsPage} />
               <Route path='/favorites' component={FavoritesPage} />
+              <Route path='/recipes' component={RecipesPage} />
             </Main>
           </div>
         </MuiThemeProvider>

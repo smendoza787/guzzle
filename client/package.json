@@ -5,7 +5,7 @@
   "proxy": "http://localhost:3001/",
   "devServer": {
     "compress": true,
-    "public": "drinksup.herokuapp.com"
+    "public": "guzzle.herokuapp.com"
   },
   "devDependencies": {
     "react-scripts": "0.7.0"

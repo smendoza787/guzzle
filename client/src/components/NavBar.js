@@ -16,6 +16,11 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         style={{ marginRight: '30px'}}
+        to="/recipes" >
+          Cocktail Recipes
+      </NavLink>
+      <NavLink
+        style={{ marginRight: '30px'}}
         to="/bars" >
           Search Local Bars
       </NavLink>
