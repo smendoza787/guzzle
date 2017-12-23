@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import RecipeSelector from '../components/RecipeSelector'
 
 class RecipesPage extends Component {
   constructor() {
     super()
 
     this.state = {
+      base: '',
       recipes: []
     }
+
+    this.selectBase = this.selectBase.bind(this)
   }
 
   componentWillMount() {
@@ -24,11 +28,16 @@ class RecipesPage extends Component {
     )
   }
 
+  selectBase(baseAlcohol) {
+    this.setState({ base: baseAlcohol })
+  }
+
   render() {
-    console.log("RECIPEZ", this.state.recipes);
     return (
-      <div>
+      <div className="recipes-page">
         <h1>Cocktail Recipes</h1>
+        <RecipeSelector selectBase={this.selectBase} />
+        <h1>Base: {this.state.base}</h1>
         <div className="recipe-list">
           {this.state.recipes.drinks && this.renderCocktails(this.state.recipes.drinks)}
         </div>
