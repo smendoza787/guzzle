@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import RecipeSelector from '../components/RecipeSelector'
 import RecipeList from '../components/RecipeList'
+import Cocktail from '../components/Cocktail'
 
 class RecipesPage extends Component {
   constructor() {
@@ -21,12 +22,7 @@ class RecipesPage extends Component {
   }
 
   renderCocktails(recipes) {
-    return recipes.map(recipe =>
-      <div className="drink">
-        <h2>{recipe.strDrink}</h2>
-        <img src={recipe.strDrinkThumb} alt="drink thumbnail" height="150" width="150" />      
-      </div>
-    )
+    return recipes.map(recipe => <Cocktail recipe={recipe} /> )
   }
 
   selectBase(baseAlcohol) {
