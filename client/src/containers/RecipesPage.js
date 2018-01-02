@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RecipeSelector from '../components/RecipeSelector'
+import RecipeList from '../components/RecipeList'
 
 class RecipesPage extends Component {
   constructor() {
@@ -37,7 +38,7 @@ class RecipesPage extends Component {
       <div className="recipes-page">
         <h1>Cocktail Recipes</h1>
         <RecipeSelector selectBase={this.selectBase} />
-        <h1>Base: {this.state.base}</h1>
+        <RecipeList base={this.state.base} />
         <div className="recipe-list">
           {this.state.recipes.drinks && this.renderCocktails(this.state.recipes.drinks)}
         </div>
