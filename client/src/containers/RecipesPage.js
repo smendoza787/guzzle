@@ -15,8 +15,8 @@ class RecipesPage extends Component {
     this.selectBase = this.selectBase.bind(this)
   }
 
-  componentWillMount() {
-    fetch('http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka')
+  componentDidMount() {
+    fetch('http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Scotch')
       .then(resp => resp.json())
       .then(cocktails => this.setState({ recipes: cocktails }))
   }
@@ -27,6 +27,9 @@ class RecipesPage extends Component {
 
   selectBase(baseAlcohol) {
     this.setState({ base: baseAlcohol })
+    fetch('http://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + this.state.base)
+      .then(resp => resp.json())
+      .then(cocktails => this.setState({ recipes: cocktails }))
   }
 
   render() {
